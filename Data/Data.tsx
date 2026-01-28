@@ -18,30 +18,30 @@ import React from "react";
   ];
   
   const services: ServiceProps[] = [
-    { id: 1, title: "UI/UX Design", icon: <BsVectorPen />, finished: 113 },
-    { id: 2, title: "Web Developmemt", icon: <BsCode />, finished: 209 },
-    { id: 3, title: "Web Research", icon: <HiMagnifyingGlass />, finished: 369 },
-    { id: 4, title: "Marketing", icon: <FiBarChart />, finished: 313 },
+    { id: 1, title: "UI/UX Design", icon: <BsVectorPen />, finished: 20 },
+    { id: 2, title: "Web Developmemt", icon: <BsCode />, finished: 35 },
+    { id: 3, title: "Web Research", icon: <HiMagnifyingGlass />, finished: 50 },
+    { id: 4, title: "Marketing", icon: <FiBarChart />, finished: 45 },
   ];
   const countUpItems: countUpItemsProps[] = [
     {
       id: 1,
-      number: 9,
+      number: 4,
       text: "Years of Experience",
     },
     {
       id: 2,
-      number: 178,
+      number: 50,
       text: "Satisfied Customers",
     },
     {
       id: 3,
-      number: 742,
+      number: 42,
       text: "Design Items",
     },
     {
       id: 4,
-      number: 112,
+      number: 50,
       text: "Clients Served",
     },
   ];
@@ -76,16 +76,16 @@ import React from "react";
   const skills = [
     { name: "HTML", level: 80 },
     { name: "CSS", level: 70 },
-    { name: "JavaScript", level: 75 },
-    { name: "TypeScript", level: 60 },
-    { name: "ReactJS", level: 75 },
-    { name: "NextJS", level: 65 },
+    { name: "JavaScript", level: 85 },
+    { name: "TypeScript", level: 80 },
+    { name: "ReactJS", level: 95 },
+    { name: "NextJS", level: 95 },
   ];
   
   const contacts: ContactsProps[] = [
-    { id: 1, title: "Address", text: "12, Adeyemi, Street" },
+    { id: 1, title: "Address", text: "Lagos, Nigeria" },
     { id: 2, title: "Phone", text: "09093430400" },
-    { id: 3, title: "Email", text: "kayode.2001@gmail.com" },
+    { id: 3, title: "Email", text: "kayodeolanrewaju53@gmail.com" },
   ];
   
   export {navLinks, projects, countUpItems, services, skills, contacts };

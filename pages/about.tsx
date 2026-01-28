@@ -15,17 +15,18 @@ export default function about() {
       <Wrapper pageIndex={2}>
         <div className="flex flex-col gap-12 lg:flex-row items-center justify-center mb-12 min-h-screen lg:mb-0 pt-28 lg:pt-0">
           <Image
-            src={"/about.jpg"}
+            src={"/kay.png"}
             width={300}
             height={300}
             alt={"about image"}
+            className='border  rounded-[12px] shadow-ShadowBlur'
           />
           <div className="lg:w-1/2 lg:ml-8 max-w-md md:max-w-xl">
             <div className="uppercase font-semibold text-sm text-WhiteGray">
               - Introduction
             </div>
             <div className="font-semibold text-3xl mt-8 text-White uppercase">
-              Hi, I&apos;m Kay Passionate Frontend Developer
+              Hi, I&apos;m Kay, A Passionate Frontend Developer
             </div>
             <p className="text-WhiteGray text-sm mt-8 leading-7">
               {" "}

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mozorozov</title>
+        <title>Kayode</title>
       </Head>
       <Wrapper pageIndex={1} className="max-w-2xl text-center flex flex-col justify-center">
         <div className="flex sm:justify-between items-center gap-4 sm:gap-0">
