@@ -5,7 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Wrapper from "../components/Wrapper";
 import { skills } from "../Data/Data";
- import Skills from "../components/Skills";
+import Skills from "../components/Skills";
 export default function about() {
   return (
     <>
@@ -43,7 +43,8 @@ export default function about() {
               </Link>
               <a
                 href="/pdf/frontend-resume.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-Orange  font-semibold text-sm uppercase hover:underline"
               >
                 Resume
@@ -51,7 +52,7 @@ export default function about() {
             </div>
           </div>
         </div>
-        <Skills skills={skills}/> 
+        <Skills skills={skills} />
       </Wrapper>
     </>
   );
