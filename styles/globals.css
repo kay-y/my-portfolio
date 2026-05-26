@@ -2,24 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
-  width: 0.75rem;
-  background-color: #b3b2b1;
-  border-radius: 10px;
+  width: 0.5rem;
+  background-color: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  width: 0.5rem;
-  background-color: #eeb844;
+  background: linear-gradient(180deg, #eeb844 0%, #d4a438 100%);
   border-radius: 10px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f5c55a 0%, #eeb844 100%);
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(238, 184, 68, 0.3);
+  color: #ffffff;
+}
+
 @layer components {
-  section {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 min-h-screen
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(238, 184, 68, 0.5), 0 0 40px rgba(238, 184, 68, 0.3);
+  }
+  
+  .bg-gradient-radial {
+    background: radial-gradient(circle at center, rgba(238, 184, 68, 0.1) 0%, transparent 70%);
   }
 }
 
+/* Hover glow effect for text */
 .TextShadow:hover {
-  text-shadow: 0 0 20px #eeb844, 0 0 20px #eeb844, 0 0 20px #eeb844;
+  text-shadow: 0 0 20px #eeb844, 0 0 30px #eeb844, 0 0 40px #eeb844;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animated gradient border */
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-border {
+  background: linear-gradient(90deg, #eeb844, #ffffff, #eeb844);
+  background-size: 200% 200%;
+  animation: gradient-rotate 3s ease infinite;
+}
+
+/* Loading animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Canvas optimization */
+canvas {
+  display: block;
+  touch-action: none;
 }
