@@ -20,6 +20,8 @@ type WrapperProps = {
     img: string;
     name: string;
     tools: string[];
+     liveUrl: string;
+  githubUrl: string;
   };
   type CountUpProps = {
     start: number

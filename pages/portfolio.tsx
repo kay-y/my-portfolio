@@ -4,14 +4,14 @@ import Head from "next/head";
 import Link from "next/link";
 import Wrapper from "../components/Wrapper";
 import { projects } from "../Data/Data";
-import {AiFillGithub,AiFillEye} from "react-icons/ai"
+import { AiFillGithub, AiFillEye } from "react-icons/ai"
 import Services from "../components/Services";
 import { countUpItems } from "../Data/Data";
 import MyCountUp from "../components/CountUp";
 import { useInView } from "react-intersection-observer";
 import Image from 'next/image';
 export default function Portfolio() {
-  const {ref,inView} = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5
   })
   return (
@@ -48,10 +48,14 @@ export default function Portfolio() {
                     height={50}
                   />
                   <div className="absolute w-full h-full bg-Orange top-0 left-0 z-10 flex items-center justify-center gap-4 scale-0 group-hover:scale-100 transition-all duration-300">
-                    <Link href="">
+                    <Link href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
                       <AiFillGithub className="text-3xl hover:scale-110 transition-all duration-300" />
                     </Link>
-                    <Link href="">
+                    <Link href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer">
                       <AiFillEye className="text-3xl hover:scale-110 transition-all duration-300" />
                     </Link>
                   </div>
@@ -77,9 +81,9 @@ export default function Portfolio() {
         <div className="flex justify-center gap-12 flex-wrap" ref={ref}>
           {countUpItems.map(item => (
             <div key={item.id} className="text-center">
-               <div className="text-Orange text-3xl">
-                {inView && <MyCountUp start={0} end={item.number} duration={3}/>}+
-              </div> 
+              <div className="text-Orange text-3xl">
+                {inView && <MyCountUp start={0} end={item.number} duration={3} />}+
+              </div>
               <div className="text-WhiteGray mt-2 text-sm">{item.text}</div>
             </div>
           ))}
